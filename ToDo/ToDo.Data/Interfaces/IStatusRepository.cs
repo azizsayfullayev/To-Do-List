@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ToDo.Domain.Entities;
 
-namespace ToDo.Domain.Common
+namespace ToDo.Data.Interfaces
 {
-    public class BaseEntity
+    public interface IStatusRepository
+    : IGenericRepository<Status>
     {
-        public int Id { get; set; }
     }
 }

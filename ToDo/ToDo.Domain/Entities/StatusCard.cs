@@ -11,6 +11,6 @@ namespace ToDo.Domain.Entities
         public int? StatusId { get; set; }
         public virtual Status? Status { get; set; }
         public int CardId { get; set; }
-        public virtual Card Card { get; set; }
+        public virtual Card? Card { get; set; }
     }
 }
