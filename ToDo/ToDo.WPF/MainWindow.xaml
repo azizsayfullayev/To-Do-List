@@ -5,8 +5,85 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDo.WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="750" Width="1100"
+        FontFamily="Assets\Fonts\# Karla-VariableFont_wght">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid Background="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="0">
+                        <Border Background="#1D2939" Width="35" 
+                                Height="35"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Margin="20 0 0 0" 
+                                CornerRadius="8">
+
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <TextBlock x:Name="UserNameTB"
+                                   Margin="8 0 0 0"
+                                   Text="Example User"
+                           Foreground="#1D2939"
+                           
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       FontWeight="Bold" FontSize="16"
+                       >
+                        </TextBlock>
+                    </Grid>
+                </Grid>
+
+                <!--There is options-->
+                <Grid Grid.Row="1">
+                    <StackPanel Margin="0 15 0 0">
+                        <Button Height="45" Width="200"
+                                Margin="0 0 15 0"
+                                VerticalAlignment="Center"
+                                BorderThickness="0" RenderTransformOrigin="0.122,0.472" >
+                            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                <Image Source="Assets\Icons\apps.png" Width="20"
+                                       ></Image>
+                                <TextBlock Text="Tasks" Margin="8 0 93 0" VerticalAlignment="Center"
+                                           HorizontalAlignment="Center"
+                                           FontWeight="Medium"></TextBlock>
+                                <Border Background="Black" Width="20" CornerRadius="4">
+                                    <TextBlock Foreground="White"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center">4</TextBlock>
+                                </Border>
+                                
+                            </StackPanel>
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="8"/>
+                                </Style>
+                            </Button.Resources>
+                            
+                            
+                        </Button>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1" Background="#F2F4F7">
+            <Frame x:Name="MainDesk"/>
+        </Grid>
     </Grid>
 </Window>
